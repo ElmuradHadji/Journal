@@ -249,3 +249,5 @@ C:\Users\hacie\Desktop\Journal\Journal\Journal\obj\Debug\net6.0\Journal.genrunti
 C:\Users\hacie\Desktop\Journal\Journal\Journal\obj\Debug\net6.0\ref\Journal.dll
 C:\Users\hacie\Desktop\Journal\Journal\Journal\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\hacie\Desktop\Journal\Journal\Journal\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\hacie\Desktop\Journal\Journal\Journal\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\hacie\Desktop\Journal\Journal\Journal\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

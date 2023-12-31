@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QDhDbktsRD6LMRqM0LzHGiYF66c5DGdfb/cdm403lQn7amCGRnsnnqeIYtE0Cy8RCOKas//OR0n+57SEywXZqw==",
+  "dgSpecHash": "HWND9SVwhHGr1boAFTd/r6Mm2Nh2c2o3D6+8DIbC0rREFWgKjXGMJcNNkcmjO0ApR2QAbHVtBzu2Tl/dRB37kg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hacie\\Desktop\\Journal\\Journal\\Journal\\Journal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hacie\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\hacie\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\hacie\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\hacie\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\hacie\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\hacie\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\hacie\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

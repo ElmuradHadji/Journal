@@ -4,6 +4,7 @@ using Journal.DTOs;
 using Journal.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 
 namespace Journal.Areas.Admin.Controllers
 {
@@ -26,6 +27,16 @@ namespace Journal.Areas.Admin.Controllers
         {
             List<journal> journals = _context.Journals.Where(c => !c.IsDeleted).ToList();
             List<JournalGetDto> journalsGet = _mapper.Map<List<JournalGetDto>>(journals);
+            foreach (JournalGetDto journalDto in journalsGet)
+            {
+                foreach (journal journal in journals)
+                {
+                    if (journal.Id == journalDto.Id)
+                    {
+                        journalDto.PrintTime = DateTime.Parse(journal.PrintTime);
+                    }
+                }
+            }
             return View(journalsGet);
         }
 
@@ -48,10 +59,11 @@ namespace Journal.Areas.Admin.Controllers
             }
          
             journal journal = _mapper.Map<journal>(journalPostDto);
-       
 
 
-            
+            journal.PrintTime = journalPostDto.PrintTime.ToString();
+
+
             _context.Journals.Add(journal);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
@@ -63,6 +75,7 @@ namespace Journal.Areas.Admin.Controllers
             journal journal = _context.Journals.Find(id);
             if (journal is null) { return NotFound(); }
             JournalUpdateDto journalUpdateDto = new JournalUpdateDto { journalGetDto = _mapper.Map<JournalGetDto>(journal) };
+            journalUpdateDto.journalGetDto.PrintTime = DateTime.Parse(journal.PrintTime);
             return View(journalUpdateDto);
         }
 
@@ -91,7 +104,7 @@ namespace Journal.Areas.Admin.Controllers
             journal.IsDeleted = false;
             journal.Name = journalUpdateDto.journalPostDto.Name;
             journal.Description = journalUpdateDto.journalPostDto.Description;
-            journal.PrintTime = journalUpdateDto.journalPostDto.PrintTime;
+            journal.PrintTime = journalUpdateDto.journalPostDto.PrintTime.ToString();
 
             _context.SaveChanges();
             //return Json(result1);
