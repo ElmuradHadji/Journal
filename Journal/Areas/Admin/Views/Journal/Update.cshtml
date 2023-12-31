@@ -1,0 +1,42 @@
+﻿@model JournalUpdateDto
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Edit Journal</h4>
+            <p class="card-description">
+                Edit Datas Properly
+            </p>
+            <form method="post" class="forms-sample">
+                <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+
+                <div class="form-group">
+                    <label></label>
+                    <label asp-for="@Model.journalPostDto.Name"></label>
+                    <input asp-for="@Model.journalPostDto.Name" value="@Model.journalGetDto.Name" class="form-control" placeholder="Name...">
+                    <span class="text text-danger" asp-validation-for="@Model.journalPostDto.Name"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.journalPostDto.PrintTime">Printing Time </label>
+                    <input asp-for="@Model.journalPostDto.PrintTime" type="date" value="@Model.journalGetDto.PrintTime" class="form-control" placeholder="Printing Time...">
+                    <span class="text text-danger" asp-validation-for="@Model.journalPostDto.PrintTime"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="@Model.journalPostDto.Description"></label>
+                    <input asp-for="@Model.journalPostDto.Description" value="@Model.journalGetDto.Description" class="form-control" placeholder="Description...">
+                    <span class="text text-danger" asp-validation-for="@Model.journalPostDto.Description"></span>
+                </div>
+                <input hidden asp-for="@Model.journalGetDto.Id" value="@Model.journalGetDto.Id" />
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button asp-action="Index" class="btn btn-dark">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
