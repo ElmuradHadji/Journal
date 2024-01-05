@@ -12,6 +12,7 @@ namespace Journal.Configuration
             builder.Property(p=>p.PrintTime).IsRequired();
             builder.Property(p=>p.Description).IsRequired();
             builder.Property(p=>p.IsDeleted).HasDefaultValue(false);
+            builder.Property(p=>p.Display).HasDefaultValue(true);
         }
     }
 }

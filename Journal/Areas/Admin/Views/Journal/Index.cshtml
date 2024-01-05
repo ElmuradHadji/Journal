@@ -28,6 +28,7 @@ else
                                 <th>Name</th>
                                 <th>Print Date</th>
                                 <th>Description</th>
+                                <th>Display</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -41,6 +42,7 @@ else
                                     <td class="text-white">@journal.Name</td>
                                     <td class="text-white">@journal.PrintTime</td>
                                     <td class="text-white">@journal.Description</td>
+                                    <td class="text-white">@journal.Display</td>
 
                                     <td><a asp-action="Update" asp-route-id="@journal.Id" class="submit text-light"><i class="mdi mdi-pencil"></i></a></td>
 

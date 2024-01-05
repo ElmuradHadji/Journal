@@ -59,7 +59,7 @@ namespace Journal.Areas.Admin.Controllers
             }
          
             journal journal = _mapper.Map<journal>(journalPostDto);
-
+            journal.Display=journalPostDto.Display;
 
             journal.PrintTime = journalPostDto.PrintTime.ToString();
 
@@ -105,6 +105,7 @@ namespace Journal.Areas.Admin.Controllers
             journal.Name = journalUpdateDto.journalPostDto.Name;
             journal.Description = journalUpdateDto.journalPostDto.Description;
             journal.PrintTime = journalUpdateDto.journalPostDto.PrintTime.ToString();
+            journal.Display= journalUpdateDto.journalPostDto.Display;
 
             _context.SaveChanges();
             //return Json(result1);
